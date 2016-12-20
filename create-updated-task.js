@@ -20,9 +20,9 @@ updatedTask.containerDefinitions[0].environment = [
 ]
 
 updatedTask.containerDefinitions[0].logConfiguration.options = {
-  'awslogs-group': process.env.STAGING_API_AWSLOGS_GROUP,
-  'awslogs-region': process.env.STAGING_API_AWSLOGS_REGION,
-  'awslogs-stream-prefix': process.env.STAGING_API_AWSLOGS_PREFIX,
+  'awslogs-group': process.env.STAGING_WEB_AWSLOGS_GROUP,
+  'awslogs-region': process.env.STAGING_WEB_AWSLOGS_REGION,
+  'awslogs-stream-prefix': process.env.STAGING_WEB_AWSLOGS_PREFIX,
 }
 
 const jsonTask = JSON.stringify(updatedTask)
