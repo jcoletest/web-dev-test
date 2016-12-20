@@ -42,6 +42,7 @@ function update_web_service () {
 }
 
 function update_ecs () {
+  create_build
   push_to_registry
   update_web_service
 }

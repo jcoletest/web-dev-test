@@ -7,7 +7,7 @@ RUN rm /usr/share/nginx/html/*
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
-COPY ./build /var/www/
+COPY ./build/ /var/www/
 
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
