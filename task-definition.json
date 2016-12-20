@@ -1,0 +1,20 @@
+{
+  "family": "webserver",
+  "containerDefinitions": [
+    {
+      "name": "webserver",
+      "portMappings":[
+        {
+          "containerPort": 80
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {}
+      },
+      "cpu": 512,
+      "memoryReservation": 128,
+      "memory": 400
+    }
+  ]
+}

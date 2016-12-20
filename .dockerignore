@@ -1,0 +1,6 @@
+.env
+.env.staging
+.git
+.editorconfig
+npm-debug.log
+node_modules

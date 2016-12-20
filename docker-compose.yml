@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  fbwebserver:
+    environment:
+      NODE_ENV: development
+    image: fieldboom/web-dev-image
+    ports:
+      - 3001:3000 # app
+    volumes:
+      - .:/usr/src/web
+    command: yarn start
+    # NOTE: Commands
+    #  Storybook -- docker-compose run fbWebServer yarn run storybook
+    #  Tests -- docker-compose run fbWebServer yarn test
+  fbwebstory:
+    environment:
+      NODE_ENV: development
+    image: fieldboom/web-dev-image
+    ports:
+      - 3009:9009 # storybook
+    volumes:
+      - .:/usr/src/web
+    command: yarn run storybook
+  fbwebsass:
+    image: fieldboom/web-dev-sass
+    volumes:
+      - .:/usr/src/web
+    command: sass --watch /usr/src/web/src:/usr/src/web/src
