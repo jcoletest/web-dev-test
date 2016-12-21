@@ -10,9 +10,6 @@ services:
     volumes:
       - .:/usr/src/web
     command: yarn start
-    # NOTE: Commands
-    #  Storybook -- docker-compose run fbWebServer yarn run storybook
-    #  Tests -- docker-compose run fbWebServer yarn test
   fbwebstory:
     environment:
       NODE_ENV: development
