@@ -13,8 +13,7 @@
         "options": {}
       },
       "cpu": 512,
-      "memoryReservation": 128,
-      "memory": 400
+      "memoryReservation": 512,
     }
   ]
 }
